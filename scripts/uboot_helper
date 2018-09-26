@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+# SPDX-License-Identifier: GPL-2.0
+# Copyright (C) 2017-present Team LibreELEC (https://libreelec.tv)
+
 import sys
 
 devices = {
@@ -8,6 +11,11 @@ devices = {
 #      'board_name' : { 'dtb' : 'board_name.dtb', 'config' : 'board_name_defconfig' },
 #    },
 #  },
+  'project' : {
+    'device' : {
+      'board_name' : { 'dtb' : 'board_name.dtb', 'config' : 'board_name_defconfig' },
+    },
+  },
   'Allwinner' : {
     'A64' : {
       'pine64' : { 'dtb' : 'sun50i-a64-pine64.dtb', 'config' : 'pine64_plus_defconfig' },
@@ -27,6 +35,21 @@ devices = {
     },
     'H6' : {
       'pine_h64' : { 'dtb' : 'sun50i-h6-pine-h64.dtb', 'config' : 'pine_h64_defconfig' },
+    },
+  },
+  'Amlogic' : {
+    'AMLGX' : {
+      'sdcard' : { 'dtb' : 'meson-gxl-s905x-p212.dts', 'config' : 'p212_defconfig' },
+      'khadas-vim' : { 'dtb' : 'meson-gxl-s905x-khadas-vim.dtb', 'config' : 'khadas-vim_defconfig' },
+      'khadas-vim2' : { 'dtb' : 'meson-gxm-khadas-vim2.dtb', 'config' : 'khadas-vim_defconfig' },
+      'lepotato' : { 'dtb' : 'meson-gxl-s905x-libretech-cc.dtb', 'config' : 'libretech-cc_defconfig' },
+      'nanopi-k2' : { 'dtb' : 'meson-gxbb-nanopi-k2.dtb', 'config' : 'nanopi-k2_defconfig' },
+      'odroid-c2' : { 'dtb' : 'meson-gxbb-odroidc2.dtb', 'config' : 'odroid-c2_defconfig' },
+      'wetek' : { 'dtb' : 'meson-gxbb-p200.dts', 'config' : 'p200_defconfig' },
+    },
+    'AMLG12' : {
+      'sdcard' : { 'dtb' : 'meson-g12a-u200.dts', 'config' : 'p212_defconfig' },
+      'odroid-n2' : { 'dtb' : 'meson-g12b-odroid-n2.dtb', 'config' : 'odroidn2_defconfig' },
     },
   },
   'Rockchip' : {
