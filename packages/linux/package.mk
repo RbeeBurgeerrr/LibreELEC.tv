@@ -16,6 +16,24 @@ PKG_STAMP="$KERNEL_TARGET $KERNEL_MAKE_EXTRACMD"
 PKG_PATCH_DIRS="$LINUX"
 
 case "$LINUX" in
+  amlogic-mainline)
+    PKG_VERSION="9fc03bc6fa69121acb6c6e195a5f01856e51bcfa" # 5.1
+    PKG_SHA256=""
+    PKG_URL="https://github.com/chewitt/linux/archive/$PKG_VERSION.tar.gz"
+    PKG_PATCH_DIRS="default amlogic-mainline"
+    ;;
+  amlogic-amlgx)
+    PKG_VERSION="e167c22f8b3249e881c47912e7bd78184d1eb98e" # linux-5.1-le-amlogic
+    PKG_SHA256="32df47cffba1b230bf0616f274f75d5e677672780ad0c443cf11e0c16b04ee4f"
+    PKG_URL="https://github.com/superna9999/linux/archive/$PKG_VERSION.tar.gz"
+    PKG_PATCH_DIRS="default amlogic-amlgx"
+    ;;
+  amlogic-g12)
+    PKG_VERSION="ca6eaa584b2c40b63132bdacaa9ead00476d881d" # amlogic/v5.1/g12a-integ-5.1
+    PKG_SHA256="b18f4cd45f207fe9c1bffc993c15e245c7a24d34663cda9a0d9b1ab3f29b9d18"
+    PKG_URL="https://github.com/superna9999/linux/archive/$PKG_VERSION.tar.gz"
+    PKG_PATCH_DIRS="default amlogic-g12"
+    ;;
   rockchip-4.4)
     PKG_VERSION="aa8bacf821e5c8ae6dd8cae8d64011c741659945"
     PKG_SHA256="a2760fe89a15aa7be142fd25fb08ebd357c5d855c41f1612cf47c6e89de39bb3"
