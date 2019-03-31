@@ -17,8 +17,19 @@ PKG_STAMP="$UBOOT_SYSTEM"
 PKG_NEED_UNPACK="$PROJECT_DIR/$PROJECT/bootloader"
 [ -n "$DEVICE" ] && PKG_NEED_UNPACK+=" $PROJECT_DIR/$PROJECT/devices/$DEVICE/bootloader"
 
-case "$PROJECT" in
-  Rockchip)
+case "${PROJECT}-${UBOOT_SYSTEM}" in
+  Amlogic-odroid-n2)
+    PKG_VERSION="7272dbb0b09cc3083edc85368b2ad947bfd210b8" # travis/odroidn2-25
+    PKG_SHA256="8ca576d88b31fdfe5b9eb5cdc2e5c6bc2d20c9a354799b8212ece4cc37dd4ddd"
+    PKG_URL="https://github.com/hardkernel/u-boot/archive/${PKG_VERSION}.tar.gz"
+    PKG_DEPENDS_TARGET+=" gcc-linaro-aarch64-elf:host gcc-linaro-arm-eabi:host"
+    ;;
+  Amlogic*)
+    PKG_VERSION="2019.07-rc1"
+    PKG_SHA256="c80166bc77ac60ab60e388c7eee07b2b9aebd407588b430c1e9ebcb8baed7ddc"
+    PKG_URL="http://ftp.denx.de/pub/u-boot/u-boot-$PKG_VERSION.tar.bz2"
+    ;;
+  Rockchip*)
     PKG_VERSION="8659d08d2b589693d121c1298484e861b7dafc4f"
     PKG_SHA256="3f9f2bbd0c28be6d7d6eb909823fee5728da023aca0ce37aef3c8f67d1179ec1"
     PKG_URL="https://github.com/rockchip-linux/u-boot/archive/$PKG_VERSION.tar.gz"
@@ -32,6 +43,19 @@ case "$PROJECT" in
     PKG_URL="http://ftp.denx.de/pub/u-boot/u-boot-$PKG_VERSION.tar.bz2"
     ;;
 esac
+
+case "${PROJECT}" in
+  Amlogic)
+    PKG_DEPENDS_TARGET+=" amlogic-boot-fip"
+    ;;
+esac
+
+post_unpack() {
+  if [ "$UBOOT_SYSTEM" = "odroid-n2" ]; then
+    sed -i "s|arm-none-eabi-|arm-eabi-|g" $PKG_BUILD/Makefile $PKG_BUILD/arch/arm/cpu/armv8/g*/firmware/scp_task/Makefile 2>/dev/null || true
+    sed -i "s|export CROSS_COMPILE=aarch64-none-elf-||g" $PKG_BUILD/Makefile || true
+  fi
+}
 
 post_patch() {
   if [ -n "$UBOOT_SYSTEM" ]; then
@@ -47,9 +71,18 @@ make_target() {
   else
     [ "${BUILD_WITH_DEBUG}" = "yes" ] && PKG_DEBUG=1 || PKG_DEBUG=0
     [ -n "$ATF_PLATFORM" ] &&  cp -av $(get_build_dir atf)/bl31.bin .
-    DEBUG=${PKG_DEBUG} CROSS_COMPILE="$TARGET_KERNEL_PREFIX" LDFLAGS="" ARCH=arm make mrproper
-    DEBUG=${PKG_DEBUG} CROSS_COMPILE="$TARGET_KERNEL_PREFIX" LDFLAGS="" ARCH=arm make $($ROOT/$SCRIPTS/uboot_helper $PROJECT $DEVICE $UBOOT_SYSTEM config)
-    DEBUG=${PKG_DEBUG} CROSS_COMPILE="$TARGET_KERNEL_PREFIX" LDFLAGS="" ARCH=arm _python_sysroot="$TOOLCHAIN" _python_prefix=/ _python_exec_prefix=/ make HOSTCC="$HOST_CC" HOSTLDFLAGS="-L$TOOLCHAIN/lib" HOSTSTRIP="true" CONFIG_MKIMAGE_DTC_PATH="scripts/dtc/dtc"
+    case "${UBOOT_SYSTEM:-$PROJECT}" in
+      odroid-n2)
+        export PATH=$TOOLCHAIN/lib/gcc-linaro-aarch64-elf/bin/:$TOOLCHAIN/lib/gcc-linaro-arm-eabi/bin/:$PATH
+        DEBUG=${PKG_DEBUG} CROSS_COMPILE=aarch64-elf- ARCH=arm CFLAGS="" LDFLAGS="" make mrproper
+        DEBUG=${PKG_DEBUG} CROSS_COMPILE=aarch64-elf- ARCH=arm CFLAGS="" LDFLAGS="" make odroidn2_defconfig
+        DEBUG=${PKG_DEBUG} CROSS_COMPILE=aarch64-elf- ARCH=arm CFLAGS="" LDFLAGS="" make HOSTCC="$HOST_CC" HOSTSTRIP="true"
+        ;;
+      *)
+        DEBUG=${PKG_DEBUG} CROSS_COMPILE="$TARGET_KERNEL_PREFIX" LDFLAGS="" ARCH=arm make mrproper
+        DEBUG=${PKG_DEBUG} CROSS_COMPILE="$TARGET_KERNEL_PREFIX" LDFLAGS="" ARCH=arm make $($ROOT/$SCRIPTS/uboot_helper $PROJECT $DEVICE $UBOOT_SYSTEM config)
+        DEBUG=${PKG_DEBUG} CROSS_COMPILE="$TARGET_KERNEL_PREFIX" LDFLAGS="" ARCH=arm _python_sysroot="$TOOLCHAIN" _python_prefix=/ _python_exec_prefix=/ make HOSTCC="$HOST_CC" HOSTLDFLAGS="-L$TOOLCHAIN/lib" HOSTSTRIP="true" CONFIG_MKIMAGE_DTC_PATH="scripts/dtc/dtc"
+    esac
   fi
 }
 
@@ -67,7 +100,11 @@ makeinstall_target() {
     # Always install the canupdate script
     if find_file_path bootloader/canupdate.sh; then
       cp -av ${FOUND_PATH} $INSTALL/usr/share/bootloader
-      sed -e "s/@PROJECT@/${DEVICE:-$PROJECT}/g" \
-          -i $INSTALL/usr/share/bootloader/canupdate.sh
+      sed -e "s/@PROJECT@/${DEVICE:-$PROJECT}/g" -i $INSTALL/usr/share/bootloader/canupdate.sh
+    fi
+
+    # Install boot.ini if it exists
+    if find_file_path bootloader/${UBOOT_SYSTEM}.ini; then
+      cp -av ${FOUND_PATH} $INSTALL/usr/share/bootloader/boot.ini
     fi
 }
