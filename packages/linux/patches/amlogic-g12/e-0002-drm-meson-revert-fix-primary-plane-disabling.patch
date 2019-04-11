@@ -1,0 +1,57 @@
+From 8e848fc8fadf3c94774be545f9a3aba5746fda2c Mon Sep 17 00:00:00 2001
+From: chewitt <github@chrishewitt.net>
+Date: Sat, 18 May 2019 08:15:39 +0000
+Subject: [PATCH 2/7] drm/meson: revert "fix primary plane disabling"
+
+Signed-off-by: Christian Hewitt <christianshewitt@gmail.com>
+---
+ drivers/gpu/drm/meson/meson_crtc.c  | 4 ++++
+ drivers/gpu/drm/meson/meson_plane.c | 3 ---
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+diff --git a/drivers/gpu/drm/meson/meson_crtc.c b/drivers/gpu/drm/meson/meson_crtc.c
+index 58f7abdc2299..5579f8ac3e3f 100644
+--- a/drivers/gpu/drm/meson/meson_crtc.c
++++ b/drivers/gpu/drm/meson/meson_crtc.c
+@@ -119,6 +119,8 @@ static void meson_g12a_crtc_atomic_enable(struct drm_crtc *crtc,
+ 			priv->io_base + _REG(VPP_OUT_H_V_SIZE));
+ 
+ 	drm_crtc_vblank_on(crtc);
++
++	priv->viu.osd1_enabled = true;
+ }
+ 
+ static void meson_crtc_atomic_enable(struct drm_crtc *crtc,
+@@ -147,6 +149,8 @@ static void meson_crtc_atomic_enable(struct drm_crtc *crtc,
+ 			    priv->io_base + _REG(VPP_MISC));
+ 
+ 	drm_crtc_vblank_on(crtc);
++
++	priv->viu.osd1_enabled = true;
+ }
+ 
+ static void meson_g12a_crtc_atomic_disable(struct drm_crtc *crtc,
+diff --git a/drivers/gpu/drm/meson/meson_plane.c b/drivers/gpu/drm/meson/meson_plane.c
+index 9c3e522d3184..a9c2cf6c63eb 100644
+--- a/drivers/gpu/drm/meson/meson_plane.c
++++ b/drivers/gpu/drm/meson/meson_plane.c
+@@ -331,8 +331,6 @@ static void meson_plane_atomic_update(struct drm_plane *plane,
+ 		meson_plane->enabled = true;
+ 	}
+ 
+-	priv->viu.osd1_enabled = true;
+-
+ 	spin_unlock_irqrestore(&priv->drm->event_lock, flags);
+ }
+ 
+@@ -351,7 +349,6 @@ static void meson_plane_atomic_disable(struct drm_plane *plane,
+ 				    priv->io_base + _REG(VPP_MISC));
+ 
+ 	meson_plane->enabled = false;
+-	priv->viu.osd1_enabled = false;
+ }
+ 
+ static const struct drm_plane_helper_funcs meson_plane_helper_funcs = {
+-- 
+2.17.1
+
