@@ -1,0 +1,45 @@
+From 421bd01da31a4687aacdd79bc474ef5cc28198be Mon Sep 17 00:00:00 2001
+From: chewitt <github@chrishewitt.net>
+Date: Sun, 19 May 2019 14:41:29 +0000
+Subject: [PATCH 10/12] dt-bindings: arm: amlogic: add support for the Khadas
+ VIM3
+
+The Khadas VIM3 uses the Amlogic S922X chipset on a board with the same
+form factor as the VIM/VIM2 models. It ships in two variants; basic and
+pro which differ in RAM and eMMC size:
+
+- 2GB (basic) or 4GB (pro) LPDDR4 RAM
+- 16GB (basic) or 32GB (pro) eMMC 5.1 storage
+- 16MB SPI flash
+- 10/100/1000 Base-T Ethernet
+- AP6398S Wireless (802.11 a/b/g/n/ac, BT5.0)
+- HDMI 2.1 video
+- 2x USB 2.0 ports
+- 1x USB-C (power)
+- 3x LED's (1x red, 1x blue, 1x white)
+- 3x buttons (power, function, reset)
+- IR receiver
+- M2 socket
+- 40pin Header
+- 1x micro SD card slot
+
+Signed-off-by: Christian Hewitt <christianshewitt@gmail.com>
+---
+ Documentation/devicetree/bindings/arm/amlogic.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/Documentation/devicetree/bindings/arm/amlogic.txt b/Documentation/devicetree/bindings/arm/amlogic.txt
+index eff41128268e..8d9e89e4f6e6 100644
+--- a/Documentation/devicetree/bindings/arm/amlogic.txt
++++ b/Documentation/devicetree/bindings/arm/amlogic.txt
+@@ -116,6 +116,7 @@ Board compatible values (alphabetically, grouped by SoC):
+   - "amediatech,x96-max" (Meson g12a s905x2)
+   - "seirobotics,sei510" (Meson g12a s905x2)
+ 
++  - "khadas,vim3" (Meson g12b s922x)
+   - "hardkernel,odroid-n2" (Meson g12b s922x)
+ 
+ Amlogic Meson Firmware registers Interface
+-- 
+2.17.1
+

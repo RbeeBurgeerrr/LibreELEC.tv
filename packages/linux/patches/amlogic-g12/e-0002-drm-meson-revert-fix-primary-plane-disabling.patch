@@ -1,7 +1,7 @@
 From 8e848fc8fadf3c94774be545f9a3aba5746fda2c Mon Sep 17 00:00:00 2001
 From: chewitt <github@chrishewitt.net>
 Date: Sat, 18 May 2019 08:15:39 +0000
-Subject: [PATCH 2/7] drm/meson: revert "fix primary plane disabling"
+Subject: [PATCH 02/12] drm/meson: revert "fix primary plane disabling"
 
 Signed-off-by: Christian Hewitt <christianshewitt@gmail.com>
 ---

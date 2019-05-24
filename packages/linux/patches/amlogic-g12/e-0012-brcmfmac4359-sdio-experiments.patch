@@ -1,0 +1,63 @@
+From 64a9304d9f2b6f493a7968379027784d5ea4bcdf Mon Sep 17 00:00:00 2001
+From: chewitt <github@chrishewitt.net>
+Date: Mon, 20 May 2019 04:36:38 +0000
+Subject: [PATCH 12/12] brcmfmac4359-sdio experiments
+
+Trigger FM loading, based on:
+
+[1] https://marc.info/?l=linux-wireless&m=153910925909908&w=2
+
+Signed-off-by: Christian Hewitt <christianshewitt@gmail.com>
+---
+ drivers/net/wireless/broadcom/brcm80211/brcmfmac/bcmsdh.c | 1 +
+ drivers/net/wireless/broadcom/brcm80211/brcmfmac/sdio.c   | 2 ++
+ include/linux/mmc/sdio_ids.h                              | 1 +
+ 3 files changed, 4 insertions(+)
+
+diff --git a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/bcmsdh.c b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/bcmsdh.c
+index ec129864cc9c..6f331212ded2 100644
+--- a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/bcmsdh.c
++++ b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/bcmsdh.c
+@@ -982,6 +982,7 @@ static const struct sdio_device_id brcmf_sdmmc_ids[] = {
+ 	BRCMF_SDIO_DEVICE(SDIO_DEVICE_ID_BROADCOM_43455),
+ 	BRCMF_SDIO_DEVICE(SDIO_DEVICE_ID_BROADCOM_4354),
+ 	BRCMF_SDIO_DEVICE(SDIO_DEVICE_ID_BROADCOM_4356),
++	BRCMF_SDIO_DEVICE(SDIO_DEVICE_ID_BROADCOM_4359),
+ 	BRCMF_SDIO_DEVICE(SDIO_DEVICE_ID_CYPRESS_4373),
+ 	BRCMF_SDIO_DEVICE(SDIO_DEVICE_ID_CYPRESS_43012),
+ 	{ /* end: all zeroes */ }
+diff --git a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/sdio.c b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/sdio.c
+index 4d104ab80fd8..870cdceebfb0 100644
+--- a/drivers/net/wireless/broadcom/brcm80211/brcmfmac/sdio.c
++++ b/drivers/net/wireless/broadcom/brcm80211/brcmfmac/sdio.c
+@@ -624,6 +624,7 @@ BRCMF_FW_DEF(43430A1, "brcmfmac43430-sdio");
+ BRCMF_FW_DEF(43455, "brcmfmac43455-sdio");
+ BRCMF_FW_DEF(4354, "brcmfmac4354-sdio");
+ BRCMF_FW_DEF(4356, "brcmfmac4356-sdio");
++BRCMF_FW_DEF(4359, "brcmfmac4359-sdio");
+ BRCMF_FW_DEF(4373, "brcmfmac4373-sdio");
+ BRCMF_FW_DEF(43012, "brcmfmac43012-sdio");
+ 
+@@ -645,6 +646,7 @@ static const struct brcmf_firmware_mapping brcmf_sdio_fwnames[] = {
+ 	BRCMF_FW_ENTRY(BRCM_CC_4345_CHIP_ID, 0xFFFFFFC0, 43455),
+ 	BRCMF_FW_ENTRY(BRCM_CC_4354_CHIP_ID, 0xFFFFFFFF, 4354),
+ 	BRCMF_FW_ENTRY(BRCM_CC_4356_CHIP_ID, 0xFFFFFFFF, 4356),
++	BRCMF_FW_ENTRY(BRCM_CC_4359_CHIP_ID, 0xFFFFFFFF, 4359),
+ 	BRCMF_FW_ENTRY(CY_CC_4373_CHIP_ID, 0xFFFFFFFF, 4373),
+ 	BRCMF_FW_ENTRY(CY_CC_43012_CHIP_ID, 0xFFFFFFFF, 43012)
+ };
+diff --git a/include/linux/mmc/sdio_ids.h b/include/linux/mmc/sdio_ids.h
+index 4332199c71c2..93a5ac7427af 100644
+--- a/include/linux/mmc/sdio_ids.h
++++ b/include/linux/mmc/sdio_ids.h
+@@ -41,6 +41,7 @@
+ #define SDIO_DEVICE_ID_BROADCOM_43455		0xa9bf
+ #define SDIO_DEVICE_ID_BROADCOM_4354		0x4354
+ #define SDIO_DEVICE_ID_BROADCOM_4356		0x4356
++#define SDIO_DEVICE_ID_BROADCOM_4359		0x4359
+ #define SDIO_DEVICE_ID_CYPRESS_4373		0x4373
+ #define SDIO_DEVICE_ID_CYPRESS_43012		43012
+ 
+-- 
+2.17.1
+

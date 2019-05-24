@@ -1,7 +1,7 @@
-From 72fbe3ccf2a139612da94c4c8d9abc78dbd9d72e Mon Sep 17 00:00:00 2001
+From debf901f8a465bb4a16c4c8e9d1f0f8fffe09765 Mon Sep 17 00:00:00 2001
 From: Christian Hewitt <christianshewitt@gmail.com>
 Date: Mon, 1 Apr 2019 04:22:30 +0400
-Subject: [PATCH 3/7] media: rc: add keymap for HardKernel ODROID remote
+Subject: [PATCH 04/12] media: rc: add keymap for HardKernel ODROID remote
 
 This is a simple NEC remote controll device shipped with the HardKernel
 ODROID range of ARM Single Board Computer (SBC) devices.
@@ -15,7 +15,7 @@ Signed-off-by: Christian Hewitt <christianshewitt@gmail.com>
  create mode 100644 drivers/media/rc/keymaps/rc-odroid.c
 
 diff --git a/drivers/media/rc/keymaps/Makefile b/drivers/media/rc/keymaps/Makefile
-index 5b1399af6b3a..03fbac32befb 100644
+index b88c4e76cdc6..f757305eacb2 100644
 --- a/drivers/media/rc/keymaps/Makefile
 +++ b/drivers/media/rc/keymaps/Makefile
 @@ -75,6 +75,7 @@ obj-$(CONFIG_RC_MAP) += rc-adstech-dvb-t-pci.o \
@@ -84,7 +84,7 @@ index 000000000000..e95aab608c5a
 +MODULE_LICENSE("GPL");
 +MODULE_AUTHOR("Christian Hewitt <christianshewitt@gmail.com");
 diff --git a/include/media/rc-map.h b/include/media/rc-map.h
-index 5e684bb0d64c..771e9e2cca50 100644
+index 19daeef96c48..ac538a5c55d9 100644
 --- a/include/media/rc-map.h
 +++ b/include/media/rc-map.h
 @@ -243,6 +243,7 @@ struct rc_map *rc_map_get(const char *name);
