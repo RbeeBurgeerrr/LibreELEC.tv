@@ -49,6 +49,7 @@ devices = {
     },
     'AMLG12' : {
       'sdcard' : { 'dtb' : 'meson-g12a-u200.dts', 'config' : 'p212_defconfig' },
+      'khadas-vim3' : { 'dtb' : 'meson-g12b-khadas-vim3.dtb', 'config' : 'odroidn2_defconfig' },
       'odroid-n2' : { 'dtb' : 'meson-g12b-odroid-n2.dtb', 'config' : 'odroidn2_defconfig' },
     },
   },
