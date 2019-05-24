@@ -12,6 +12,12 @@ PKG_TOOLCHAIN="manual"
 PKG_STAMP="$UBOOT_SYSTEM"
 
 case "$UBOOT_SYSTEM" in
+  khadas-vim3|odroid-n2)
+    PKG_VERSION="7272dbb0b09cc3083edc85368b2ad947bfd210b8" # travis/odroidn2-25
+    PKG_SHA256="8ca576d88b31fdfe5b9eb5cdc2e5c6bc2d20c9a354799b8212ece4cc37dd4ddd"
+    PKG_URL="https://github.com/hardkernel/u-boot/archive/${PKG_VERSION}.tar.gz"
+    PKG_SOURCE_DIR="u-boot-${PKG_VERSION}"
+    ;;
   khadas-vim*)
     PKG_VERSION="20180207"
     PKG_SHA256="8dfdf0a267bbedde2229f22d41f0573f67a182a2bb4852db3baae884315f5acc"
@@ -27,12 +33,6 @@ case "$UBOOT_SYSTEM" in
   odroid-c2)
     PKG_VERSION="s905_6.0.1_v3.7"
     PKG_SHA256="3ee700fd3a6439997060ac6d21217b0adba3a801876707fae70988f8ce6c3fef"
-    PKG_URL="https://github.com/hardkernel/u-boot/archive/${PKG_VERSION}.tar.gz"
-    PKG_SOURCE_DIR="u-boot-${PKG_VERSION}"
-    ;;
-  odroid-n2)
-    PKG_VERSION="7272dbb0b09cc3083edc85368b2ad947bfd210b8" # travis/odroidn2-25
-    PKG_SHA256="8ca576d88b31fdfe5b9eb5cdc2e5c6bc2d20c9a354799b8212ece4cc37dd4ddd"
     PKG_URL="https://github.com/hardkernel/u-boot/archive/${PKG_VERSION}.tar.gz"
     PKG_SOURCE_DIR="u-boot-${PKG_VERSION}"
     ;;
