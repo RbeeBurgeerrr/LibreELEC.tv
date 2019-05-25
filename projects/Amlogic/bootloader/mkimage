@@ -35,7 +35,7 @@ case ${UBOOT_SYSTEM} in
     dd if="$DESTDIR/u-boot.gxbb" of="$DESTDIR/u-boot.bin.sd.bin" conv=fsync,notrunc bs=512 seek=97 >"$SAVE_ERROR" 2>&1 || show_error
     ;;
 
-  odroid-n2)
+  odroid-n2|khadas-vim3)
     BIN_DIR="$(get_build_dir u-boot)/sd_fuse"
     cp $BIN_DIR/u-boot.bin.sd.bin $DESTDIR/u-boot.bin.sd.bin
     ;;
