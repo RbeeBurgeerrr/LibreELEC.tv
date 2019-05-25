@@ -18,7 +18,7 @@ PKG_NEED_UNPACK="$PROJECT_DIR/$PROJECT/bootloader"
 [ -n "$DEVICE" ] && PKG_NEED_UNPACK+=" $PROJECT_DIR/$PROJECT/devices/$DEVICE/bootloader"
 
 case "${PROJECT}-${UBOOT_SYSTEM}" in
-  Amlogic-odroid-n2)
+  Amlogic-odroid-n2|Amlogic-khadas-vim3)
     PKG_VERSION="7272dbb0b09cc3083edc85368b2ad947bfd210b8" # travis/odroidn2-25
     PKG_SHA256="8ca576d88b31fdfe5b9eb5cdc2e5c6bc2d20c9a354799b8212ece4cc37dd4ddd"
     PKG_URL="https://github.com/hardkernel/u-boot/archive/${PKG_VERSION}.tar.gz"
@@ -51,7 +51,7 @@ case "${PROJECT}" in
 esac
 
 post_unpack() {
-  if [ "$UBOOT_SYSTEM" = "odroid-n2" ]; then
+  if [ "$UBOOT_SYSTEM" = "odroid-n2" -o "$UBOOT_SYSTEM" = "khadas-vim3" ]; then
     sed -i "s|arm-none-eabi-|arm-eabi-|g" $PKG_BUILD/Makefile $PKG_BUILD/arch/arm/cpu/armv8/g*/firmware/scp_task/Makefile 2>/dev/null || true
     sed -i "s|export CROSS_COMPILE=aarch64-none-elf-||g" $PKG_BUILD/Makefile || true
   fi
@@ -72,7 +72,7 @@ make_target() {
     [ "${BUILD_WITH_DEBUG}" = "yes" ] && PKG_DEBUG=1 || PKG_DEBUG=0
     [ -n "$ATF_PLATFORM" ] &&  cp -av $(get_build_dir atf)/bl31.bin .
     case "${UBOOT_SYSTEM:-$PROJECT}" in
-      odroid-n2)
+      odroid-n2|khadas-vim3)
         export PATH=$TOOLCHAIN/lib/gcc-linaro-aarch64-elf/bin/:$TOOLCHAIN/lib/gcc-linaro-arm-eabi/bin/:$PATH
         DEBUG=${PKG_DEBUG} CROSS_COMPILE=aarch64-elf- ARCH=arm CFLAGS="" LDFLAGS="" make mrproper
         DEBUG=${PKG_DEBUG} CROSS_COMPILE=aarch64-elf- ARCH=arm CFLAGS="" LDFLAGS="" make odroidn2_defconfig
