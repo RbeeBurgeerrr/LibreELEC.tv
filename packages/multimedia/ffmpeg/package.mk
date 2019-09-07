@@ -13,11 +13,20 @@ PKG_DEPENDS_TARGET="toolchain zlib bzip2 gnutls speex"
 PKG_LONGDESC="FFmpeg is a complete, cross-platform solution to record, convert and stream audio and video."
 PKG_BUILD_FLAGS="-gold"
 
+if [ "$PROJECT" = "Amlogic" ]; then
+  PKG_VERSION="6782fb0f7868b6024d5f6b913b5392bba41fdd9e"
+  PKG_SHA256="9fc4b4e39525c43e77b4dd26f968dd56a82bddf3ef04baf8e4424fd0289103c4"
+  PKG_URL="https://github.com/tmm1/FFmpeg/archive/${PKG_VERSION}.tar.gz"
+fi
+
 # Dependencies
 get_graphicdrivers
 
-if [ "$V4L2_SUPPORT" = "yes" ]; then
+if [ "$V4L2_SUPPORT" = "yes" -a "$PROJECT" != "Amlogic"  ]; then
   PKG_PATCH_DIRS+=" v4l2"
+  PKG_DEPENDS_TARGET="$PKG_DEPENDS_TARGET libdrm"
+  PKG_FFMPEG_V4L2="--enable-v4l2_m2m --enable-libdrm"
+elif [ "$V4L2_SUPPORT" = "yes" -a "$PROJECT" = "Amlogic"  ]; then
   PKG_DEPENDS_TARGET="$PKG_DEPENDS_TARGET libdrm"
   PKG_FFMPEG_V4L2="--enable-v4l2_m2m --enable-libdrm"
 else
