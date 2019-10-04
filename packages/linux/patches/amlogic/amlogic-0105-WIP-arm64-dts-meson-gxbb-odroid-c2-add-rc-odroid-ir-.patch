@@ -1,0 +1,26 @@
+From f2e78535982bb3a3d671586d4a06c0e44ace501e Mon Sep 17 00:00:00 2001
+From: Christian Hewitt <christianshewitt@gmail.com>
+Date: Sat, 19 Oct 2019 04:39:47 +0000
+Subject: [PATCH 105/113] WIP: arm64: dts: meson-gxbb-odroid-c2: add rc-odroid
+ ir keymap
+
+Signed-off-by: Christian Hewitt <christianshewitt@gmail.com>
+---
+ arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts b/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts
+index 7d8906c1efd6..4f315af14796 100644
+--- a/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts
++++ b/arch/arm64/boot/dts/amlogic/meson-gxbb-odroidc2.dts
+@@ -247,6 +247,7 @@
+ 	status = "okay";
+ 	pinctrl-0 = <&remote_input_ao_pins>;
+ 	pinctrl-names = "default";
++	linux,rc-map-name = "rc-odroid";
+ };
+ 
+ &gpio_ao {
+-- 
+2.17.1
+
