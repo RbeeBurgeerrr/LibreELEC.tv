@@ -18,6 +18,7 @@ mkdir -p "$RELEASE_DIR/3rdparty/bootloader/dtb"
     AMLG12)
       cp -a $(get_build_dir linux)/arch/$TARGET_KERNEL_ARCH/boot/dts/amlogic/*g12a*.dtb $RELEASE_DIR/3rdparty/bootloader/dtb
       cp -a $(get_build_dir linux)/arch/$TARGET_KERNEL_ARCH/boot/dts/amlogic/*g12b*.dtb $RELEASE_DIR/3rdparty/bootloader/dtb
+      cp -a $(get_build_dir linux)/arch/$TARGET_KERNEL_ARCH/boot/dts/amlogic/*sm1*.dtb $RELEASE_DIR/3rdparty/bootloader/dtb
       ;;
     *)
       cp -a $(get_build_dir linux)/arch/$TARGET_KERNEL_ARCH/boot/dts/amlogic/*.dtb $RELEASE_DIR/3rdparty/bootloader/dtb
