@@ -29,8 +29,8 @@ case "$PROJECT" in
     PKG_PATCH_DIRS="rockchip"
     ;;
   *)
-    PKG_VERSION="d9110878895634cd9e8bf891c832d2a58b36863c"
-    PKG_SHA256="4d89dc15e5fa3bc9379c097d3315aba08ff6812b892b8900f4bef3fabb8ca1f5"
+    PKG_VERSION="0b0c6af38738f2c132cfd41a240889acaa031c8f" # 2020.01
+    PKG_SHA256="b6c30cf21175a3bde29bd294b6df83ecf59c380511551f04e267589f0b2d2bae"
     PKG_URL="https://github.com/u-boot/u-boot/archive/$PKG_VERSION.tar.gz"
     ;;
 esac
