@@ -13,8 +13,8 @@ PKG_LONGDESC="Mesa is a 3-D graphics library with an API."
 PKG_TOOLCHAIN="meson"
 
 if listcontains "${GRAPHIC_DRIVERS}" "(lima|panfrost)"; then
-  PKG_VERSION="71dd52e0560e3d32dd040301ae99e0ae2da4384e" # master-20.0
-  PKG_SHA256="200e8ce31b71e62e42259a9f0bf5e6ce197bc059d6c9d3d389a77112405842b6"
+  PKG_VERSION="a0d65d860db892352ee5848ed28c5d5b75798df7" # master-20.0
+  PKG_SHA256="dbc5a1619341117f13b0319b4d2f4399feff189b73a3ba20e4ad8301dc0fca6e"
   PKG_URL="https://gitlab.freedesktop.org/mesa/mesa/-/archive/$PKG_VERSION/mesa-$PKG_VERSION.tar.gz"
 fi
 
