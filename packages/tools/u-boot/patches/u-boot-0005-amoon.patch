@@ -1,0 +1,12 @@
+diff --git a/arch/arm/mach-meson/Kconfig b/arch/arm/mach-meson/Kconfig
+index e29e4c0acc..513a33dae2 100644
+--- a/arch/arm/mach-meson/Kconfig
++++ b/arch/arm/mach-meson/Kconfig
+@@ -8,6 +8,7 @@  config MESON64_COMMON
+ 	select DM_SERIAL
+ 	select SYSCON
+ 	select REGMAP
++	select PWRSEQ
+ 	select BOARD_LATE_INIT
+ 	imply CMD_DM
+ 

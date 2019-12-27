@@ -1,0 +1,52 @@
+diff --git a/arch/arm/include/asm/arch-meson/sd_emmc.h b/arch/arm/include/asm/arch-meson/sd_emmc.h
+index e3a72c8b66..ee20c009e2 100644
+--- a/arch/arm/include/asm/arch-meson/sd_emmc.h
++++ b/arch/arm/include/asm/arch-meson/sd_emmc.h
+@@ -7,6 +7,7 @@ 
+ #define __SD_EMMC_H__
+ 
+ #include <mmc.h>
++#include <linux/bitops.h>
+ 
+ #define SDIO_PORT_A			0
+ #define SDIO_PORT_B			1
+@@ -19,14 +20,11 @@ 
+ #define   CLK_MAX_DIV			63
+ #define   CLK_SRC_24M			(0 << 6)
+ #define   CLK_SRC_DIV2			(1 << 6)
+-#define   CLK_CO_PHASE_000		(0 << 8)
+-#define   CLK_CO_PHASE_090		(1 << 8)
+-#define   CLK_CO_PHASE_180		(2 << 8)
+-#define   CLK_CO_PHASE_270		(3 << 8)
+-#define   CLK_TX_PHASE_000		(0 << 10)
+-#define   CLK_TX_PHASE_090		(1 << 10)
+-#define   CLK_TX_PHASE_180		(2 << 10)
+-#define   CLK_TX_PHASE_270		(3 << 10)
++
++#define   CLK_PHASE_180 		2
++#define   CLK_TX_PHASE_MASK		GENMASK(11, 10)
++#define   CLK_RX_PHASE_MASK		GENMASK(13, 12)
++
+ #define   CLK_ALWAYS_ON			BIT(24)
+ 
+ #define MESON_SD_EMMC_CFG		0x44
+diff --git a/drivers/mmc/meson_gx_mmc.c b/drivers/mmc/meson_gx_mmc.c
+index 86c1a7164a..ad697d3a5e 100644
+--- a/drivers/mmc/meson_gx_mmc.c
++++ b/drivers/mmc/meson_gx_mmc.c
+@@ -52,10 +52,11 @@  static void meson_mmc_config_clock(struct mmc *mmc)
+ 	clk_div = DIV_ROUND_UP(clk, mmc->clock);
+ 
+ 	/* 180 phase core clock */
+-	meson_mmc_clk |= CLK_CO_PHASE_180;
+-
+-	/* 180 phase tx clock */
+-	meson_mmc_clk |= CLK_TX_PHASE_000;
++	meson_mmc_clk |= CLK_PHASE_180;
++	/* 000 phase rx clock */
++	meson_mmc_clk |= CLK_RX_PHASE_MASK;
++	/* 000 phase tx clock */
++	meson_mmc_clk |= CLK_TX_PHASE_MASK;
+ 
+ 	/* clock settings */
+ 	meson_mmc_clk |= clk_src;
