@@ -274,15 +274,16 @@ post_install() {
   add_group utmp 22
   add_group input 199
 
-  enable_service machine-id.service
-  enable_service debugconfig.service
-  enable_service userconfig.service
-  enable_service usercache.service
-  enable_service envconfig.service
-  enable_service kernel-overlays.service
-  enable_service hwdb.service
   enable_service cpufreq.service
+  enable_service debugconfig.service
+  enable_service debug-shell.service
+  enable_service envconfig.service
+  enable_service hwdb.service
+  enable_service kernel-overlays.service
+  enable_service machine-id.service
   enable_service network-base.service
   enable_service systemd-timesyncd.service
   enable_service systemd-timesyncd-setup.service
+  enable_service userconfig.service
+  enable_service usercache.service
 }
