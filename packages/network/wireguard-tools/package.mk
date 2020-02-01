@@ -23,6 +23,7 @@ make_target() {
 
 makeinstall_target() {
   mkdir -p $INSTALL/usr/bin
+    cp $PKG_DIR/scripts/wireguard-helper $INSTALL/usr/bin
     cp $PKG_DIR/scripts/wg-keygen $INSTALL/usr/bin
     cp $PKG_BUILD/src/wg $INSTALL/usr/bin
 

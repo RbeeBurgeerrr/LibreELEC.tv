@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# SPDX-License-Identifier: GPL-2.0
+# Copyright (C) 2020-present Team LibreELEC (https://libreelec.tv)
+
+case $1 in
+  StartPre)
+    mkdir -p /storage/.cache/wireguard
+    cp /run/libreelec/resolv.conf /storage/.cache/wireguard/resolv.conf
+    ;;
+  StartPost)
+    NAMESERVERS=$(egrep '192.168|172.16|10.' /run/libreelec/resolv.conf | awk '{print $2}')
+    for host in $NAMESERVERS; do
+      sed -i /${host}/d /run/libreelec/resolv.conf
+    done
+    ;;
+  StopPost)
+    cp /storage/.cache/wireguard/resolv.conf /run/libreelec/resolv.conf
+    rm /storage/.cache/wireguard/resolv.conf
+    ;;
+esac
