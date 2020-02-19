@@ -1,7 +1,7 @@
 From 9d2e70bb5df475af3376fd641f92a9b7595ba0a2 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Thu, 13 Feb 2020 16:51:58 +0100
-Subject: [PATCH 019/113] FROMGIT: ASoC: meson: gx: add sound card dt-binding
+Subject: [PATCH 019/117] FROMGIT: ASoC: meson: gx: add sound card dt-binding
  documentation
 
 Add the dt-binding documentation of sound card supporting the amlogic

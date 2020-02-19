@@ -1,7 +1,7 @@
 From f69dcf9c445f941cc79c2d392d7c0e311df4adff Mon Sep 17 00:00:00 2001
 From: Qiang Yu <yuq825@gmail.com>
 Date: Thu, 16 Jan 2020 21:11:54 +0800
-Subject: [PATCH 002/113] FROMGIT: drm/lima: add lima_vm_map_bo
+Subject: [PATCH 002/117] FROMGIT: drm/lima: add lima_vm_map_bo
 
 For dynamically mapping added backup memory of lima_bo to vm.
 This is a preparation for adding heap buffer support.

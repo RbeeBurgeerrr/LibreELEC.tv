@@ -1,7 +1,7 @@
 From c928781fa583f2638ea4f9dd118d97c26091f7b0 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Wed, 14 Aug 2019 17:28:36 +0200
-Subject: [PATCH 049/113] WIP: arm64: dts: meson: g12a: add internal DAC glue
+Subject: [PATCH 049/117] WIP: arm64: dts: meson: g12a: add internal DAC glue
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 ---

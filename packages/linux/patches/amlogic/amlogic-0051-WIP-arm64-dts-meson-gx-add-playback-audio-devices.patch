@@ -1,7 +1,7 @@
 From ae2699498e5cc9f258ce84e8b68dd2e0ec03a8c6 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Tue, 22 Oct 2019 18:15:43 +0200
-Subject: [PATCH 051/113] WIP: arm64: dts: meson-gx: add playback audio devices
+Subject: [PATCH 051/117] WIP: arm64: dts: meson-gx: add playback audio devices
 
 FIXME: Missing gxbb ATM
 

@@ -1,7 +1,7 @@
 From 581adc3b6c748a957443db9be22ed60dabb05513 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Wed, 14 Aug 2019 17:28:21 +0200
-Subject: [PATCH 048/113] WIP: arm64: dts: meson: g12a: add internal DAC
+Subject: [PATCH 048/117] WIP: arm64: dts: meson: g12a: add internal DAC
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 ---

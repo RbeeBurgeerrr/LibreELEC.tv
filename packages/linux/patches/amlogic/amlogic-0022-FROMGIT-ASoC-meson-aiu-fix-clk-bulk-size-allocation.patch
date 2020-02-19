@@ -1,7 +1,7 @@
 From 383e1266e266e7c6029d6dae07139a2bffa94718 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Mon, 17 Feb 2020 02:51:14 +0000
-Subject: [PATCH 022/113] FROMGIT: ASoC: meson: aiu: fix clk bulk size
+Subject: [PATCH 022/117] FROMGIT: ASoC: meson: aiu: fix clk bulk size
  allocation
 
 Fix the size of allocated memory for the clock bulk data

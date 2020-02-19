@@ -1,7 +1,7 @@
 From d01bb4cbb136d6ad20b3da7dbca214964a04bf65 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Fri, 24 Jan 2020 15:40:25 +0100
-Subject: [PATCH 038/113] WIP: ASoC: meson: convert axg fifo to schema
+Subject: [PATCH 038/117] WIP: ASoC: meson: convert axg fifo to schema
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 ---

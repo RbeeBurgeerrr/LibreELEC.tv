@@ -1,7 +1,7 @@
 From 82a0f46a79b3872dd7a97481ca788b8847cba711 Mon Sep 17 00:00:00 2001
 From: Jianxin Pan <jianxin.pan@amlogic.com>
 Date: Wed, 15 Jan 2020 19:30:30 +0800
-Subject: [PATCH 030/113] FROMGIT: soc: amlogic: Add support for Secure power
+Subject: [PATCH 030/117] FROMGIT: soc: amlogic: Add support for Secure power
  domains controller
 
 Add support for the Amlogic Secure Power controller. In A1/C1 series, power

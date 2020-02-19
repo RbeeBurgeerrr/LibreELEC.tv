@@ -1,7 +1,7 @@
 From af927cdb2f91d855c50eec665f5716d3cfda1fec Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Fri, 24 Jan 2020 12:13:40 +0100
-Subject: [PATCH 037/113] WIP: ASoC: meson: convert axg pdm to schema
+Subject: [PATCH 037/117] WIP: ASoC: meson: convert axg pdm to schema
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 ---

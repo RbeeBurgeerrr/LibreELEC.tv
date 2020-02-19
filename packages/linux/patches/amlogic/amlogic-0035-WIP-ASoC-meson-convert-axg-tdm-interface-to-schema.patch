@@ -1,7 +1,7 @@
 From 3ed08aedbd3682cca761f1ffd32a41c9d2cf9076 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Fri, 24 Jan 2020 11:08:09 +0100
-Subject: [PATCH 035/113] WIP: ASoC: meson: convert axg tdm interface to schema
+Subject: [PATCH 035/117] WIP: ASoC: meson: convert axg tdm interface to schema
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 ---

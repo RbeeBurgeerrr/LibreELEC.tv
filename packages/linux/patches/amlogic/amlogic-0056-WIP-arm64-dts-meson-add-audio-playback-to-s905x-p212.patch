@@ -1,7 +1,7 @@
 From 46d30f167ebdd3eb036a3d725d894defa8a7b09a Mon Sep 17 00:00:00 2001
 From: Christian Hewitt <christianshewitt@gmail.com>
 Date: Tue, 18 Feb 2020 03:54:58 +0000
-Subject: [PATCH 056/113] WIP: arm64: dts: meson: add audio playback to
+Subject: [PATCH 056/117] WIP: arm64: dts: meson: add audio playback to
  s905x-p212 dtsi
 
 Signed-off-by: Christian Hewitt <christianshewitt@gmail.com>

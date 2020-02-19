@@ -1,7 +1,7 @@
 From cff9be99d0bc8869382e26be1926d62b10b45882 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Mon, 17 Feb 2020 02:52:13 +0000
-Subject: [PATCH 023/113] FROMGIT: ASoC: meson: aiu: fix irq registration
+Subject: [PATCH 023/117] FROMGIT: ASoC: meson: aiu: fix irq registration
 
 The aiu stored the irq in an unsigned integer which may have discarded an
 error returned by platform_get_irq_byname(). This is incorrect and should

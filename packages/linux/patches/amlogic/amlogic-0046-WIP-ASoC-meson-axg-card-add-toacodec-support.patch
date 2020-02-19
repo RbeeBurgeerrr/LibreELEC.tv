@@ -1,7 +1,7 @@
 From 144e57c92f1a160af97029bcc43daaba7e7a885a Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Wed, 14 Aug 2019 17:27:12 +0200
-Subject: [PATCH 046/113] WIP: ASoC: meson: axg-card: add toacodec support
+Subject: [PATCH 046/117] WIP: ASoC: meson: axg-card: add toacodec support
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 ---

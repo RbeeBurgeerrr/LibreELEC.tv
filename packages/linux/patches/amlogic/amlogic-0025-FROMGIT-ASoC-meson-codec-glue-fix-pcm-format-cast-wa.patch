@@ -1,7 +1,7 @@
 From 753b5b7f7870c80276e3285e9ac9da43fc2ac3d6 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Mon, 17 Feb 2020 02:54:18 +0000
-Subject: [PATCH 025/113] FROMGIT: ASoC: meson: codec-glue: fix pcm format cast
+Subject: [PATCH 025/117] FROMGIT: ASoC: meson: codec-glue: fix pcm format cast
  warning
 
 Clarify the cast of snd_pcm_format_t and fix the sparse warning:

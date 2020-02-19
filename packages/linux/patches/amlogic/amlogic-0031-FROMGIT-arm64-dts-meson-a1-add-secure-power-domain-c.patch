@@ -1,7 +1,7 @@
 From 1d0240d45c1870904ef5a61a56f452625cd5dbe4 Mon Sep 17 00:00:00 2001
 From: Jianxin Pan <jianxin.pan@amlogic.com>
 Date: Wed, 15 Jan 2020 19:30:31 +0800
-Subject: [PATCH 031/113] FROMGIT: arm64: dts: meson: a1: add secure power
+Subject: [PATCH 031/117] FROMGIT: arm64: dts: meson: a1: add secure power
  domain controller
 
 Enable power domain controller for Meson A1 SoC.

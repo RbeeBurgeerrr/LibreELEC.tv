@@ -1,7 +1,7 @@
 From c33e75720620b0195ea038403ec356b47a732bbc Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Thu, 13 Feb 2020 16:51:56 +0100
-Subject: [PATCH 017/113] FROMGIT: ASoC: meson: aiu: add internal dac codec
+Subject: [PATCH 017/117] FROMGIT: ASoC: meson: aiu: add internal dac codec
  control support
 
 Add the codec to codec component which handles the routing between

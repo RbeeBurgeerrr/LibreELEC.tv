@@ -1,7 +1,7 @@
 From 3bd01612a75d361678d8e46817c77c3708efde8c Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Tue, 28 Jan 2020 13:38:38 +0100
-Subject: [PATCH 033/113] WIP: ASoC: meson: add t9015 internal codec binding
+Subject: [PATCH 033/117] WIP: ASoC: meson: add t9015 internal codec binding
  documentation
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>

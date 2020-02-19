@@ -1,7 +1,7 @@
 From 81c19e2b29a4d2c3a5003fac1235a84f1a94e7dc Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Thu, 13 Feb 2020 16:51:53 +0100
-Subject: [PATCH 014/113] FROMGIT: ASoC: meson: aiu: add audio output
+Subject: [PATCH 014/117] FROMGIT: ASoC: meson: aiu: add audio output
  dt-bindings
 
 Add the dt-bindings and documentation of the AIU audio controller.

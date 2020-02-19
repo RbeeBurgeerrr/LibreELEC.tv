@@ -1,7 +1,7 @@
 From ff6cbdced7cfeab9c8fabd67e53ef84c632b4a52 Mon Sep 17 00:00:00 2001
 From: Qiang Yu <yuq825@gmail.com>
 Date: Thu, 16 Jan 2020 21:11:53 +0800
-Subject: [PATCH 001/113] FROMGIT: drm/lima: update register info
+Subject: [PATCH 001/117] FROMGIT: drm/lima: update register info
 
 From Mali r10p0 kernel driver source code.
 

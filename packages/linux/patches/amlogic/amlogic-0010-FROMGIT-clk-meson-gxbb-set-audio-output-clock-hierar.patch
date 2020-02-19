@@ -1,7 +1,7 @@
 From 8b95b6ab34b1f3c7e1cd6bb63a5eba695f4bad9a Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Wed, 22 Jan 2020 11:04:51 +0100
-Subject: [PATCH 010/113] FROMGIT: clk: meson: gxbb: set audio output clock
+Subject: [PATCH 010/117] FROMGIT: clk: meson: gxbb: set audio output clock
  hierarchy
 
 The aiu devices peripheral clocks needs the aiu and aiu_glue clocks to

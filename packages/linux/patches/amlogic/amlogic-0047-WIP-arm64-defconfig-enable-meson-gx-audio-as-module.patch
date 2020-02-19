@@ -1,7 +1,7 @@
 From c39f7b1f2683365ff4ed4561cb9965d8d2313cba Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Wed, 4 Dec 2019 17:09:06 +0100
-Subject: [PATCH 047/113] WIP: arm64: defconfig: enable meson gx audio as
+Subject: [PATCH 047/117] WIP: arm64: defconfig: enable meson gx audio as
  module
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>

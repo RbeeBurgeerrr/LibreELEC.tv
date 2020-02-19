@@ -1,7 +1,7 @@
 From bc8d1adc0fce74da25fcbe81b3a42b1505a80948 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Thu, 13 Feb 2020 16:51:57 +0100
-Subject: [PATCH 018/113] FROMGIT: ASoC: meson: axg: extract sound card utils
+Subject: [PATCH 018/117] FROMGIT: ASoC: meson: axg: extract sound card utils
 
 This prepares the addition of the GX SoC family sound card driver.
 The GX sound card, while slightly different, will be similar to the

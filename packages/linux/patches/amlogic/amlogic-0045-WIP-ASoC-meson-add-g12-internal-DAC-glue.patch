@@ -1,7 +1,7 @@
 From 0efe2962d47a751d92f25c9de382f64f41e22ff2 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Mon, 12 Aug 2019 11:45:16 +0200
-Subject: [PATCH 045/113] WIP: ASoC: meson: add g12 internal DAC glue
+Subject: [PATCH 045/117] WIP: ASoC: meson: add g12 internal DAC glue
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 ---

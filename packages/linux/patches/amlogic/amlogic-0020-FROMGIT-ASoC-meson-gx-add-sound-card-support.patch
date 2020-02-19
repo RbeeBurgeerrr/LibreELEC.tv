@@ -1,7 +1,7 @@
 From 430aa25aaf9d8f13a221653a6c67936ebd01d60d Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Thu, 13 Feb 2020 16:51:59 +0100
-Subject: [PATCH 020/113] FROMGIT: ASoC: meson: gx: add sound card support
+Subject: [PATCH 020/117] FROMGIT: ASoC: meson: gx: add sound card support
 
 Add support for the sound card used on the amlogic GX SoC family
 

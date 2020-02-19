@@ -1,7 +1,7 @@
 From 2671074a1a8f76ccf681f403bd9c7b5e2e5f4d8a Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Tue, 28 Jan 2020 13:37:39 +0100
-Subject: [PATCH 044/113] WIP: ASoC: meson: add g12a-toacodec dt-binding
+Subject: [PATCH 044/117] WIP: ASoC: meson: add g12a-toacodec dt-binding
  documentation
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>

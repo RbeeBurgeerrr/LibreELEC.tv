@@ -1,7 +1,7 @@
 From b3f3a572231ca83c6a409854f87d716af1a27a5b Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Wed, 4 Dec 2019 17:05:49 +0100
-Subject: [PATCH 054/113] WIP: arm64: dts: meson: add libretech ac s805x audio
+Subject: [PATCH 054/117] WIP: arm64: dts: meson: add libretech ac s805x audio
  playback
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>

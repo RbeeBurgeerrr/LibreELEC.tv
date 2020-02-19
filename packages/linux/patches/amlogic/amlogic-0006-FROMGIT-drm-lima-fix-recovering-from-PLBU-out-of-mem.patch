@@ -1,7 +1,7 @@
 From 2b957fa79d902b33d9c96f506db360c588fa9abf Mon Sep 17 00:00:00 2001
 From: Vasily Khoruzhick <anarsoul@gmail.com>
 Date: Tue, 18 Feb 2020 22:09:52 +0000
-Subject: [PATCH 006/113] FROMGIT: drm/lima: fix recovering from PLBU out of
+Subject: [PATCH 006/117] FROMGIT: drm/lima: fix recovering from PLBU out of
  memory
 
 It looks like on PLBU_OUT_OF_MEM interrupt we need to resume from where we

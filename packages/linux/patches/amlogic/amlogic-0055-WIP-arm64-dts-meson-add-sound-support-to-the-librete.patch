@@ -1,7 +1,7 @@
 From 2c6f79241ba83856cf973fdd1052563e966c1837 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Tue, 17 Dec 2019 11:05:36 +0100
-Subject: [PATCH 055/113] WIP: arm64: dts: meson: add sound support to the
+Subject: [PATCH 055/117] WIP: arm64: dts: meson: add sound support to the
  libretech-pc
 
 Add HDMI sound support on the libretech PC form factor

@@ -1,7 +1,7 @@
 From 2fee12589eed5910865e592dd8c8d9b6da561b91 Mon Sep 17 00:00:00 2001
 From: Guillaume La Roque <glaroque@baylibre.com>
 Date: Fri, 17 Jan 2020 14:34:23 +0100
-Subject: [PATCH 027/113] FROMGIT: arm64: dts: meson-sm1-sei610: add missing
+Subject: [PATCH 027/117] FROMGIT: arm64: dts: meson-sm1-sei610: add missing
  interrupt-names
 
 add missing "host-wakeup interrupt names

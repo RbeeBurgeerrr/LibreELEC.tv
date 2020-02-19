@@ -1,7 +1,7 @@
 From f615b8fa4a48e09ccfbaf4a3f686a9c08cf6d2d6 Mon Sep 17 00:00:00 2001
 From: Qiang Yu <yuq825@gmail.com>
 Date: Thu, 16 Jan 2020 21:11:57 +0800
-Subject: [PATCH 005/113] FROMGIT: drm/lima: increase driver version to 1.1
+Subject: [PATCH 005/117] FROMGIT: drm/lima: increase driver version to 1.1
 
 Increase driver version for mesa driver to identify
 the support of new heap buffer interface.

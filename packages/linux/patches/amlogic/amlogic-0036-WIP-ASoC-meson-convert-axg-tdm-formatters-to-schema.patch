@@ -1,7 +1,7 @@
 From f0219309d8850438108a890ca2aa11fab50fe47c Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Fri, 24 Jan 2020 12:00:01 +0100
-Subject: [PATCH 036/113] WIP: ASoC: meson: convert axg tdm formatters to
+Subject: [PATCH 036/117] WIP: ASoC: meson: convert axg tdm formatters to
  schema
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>

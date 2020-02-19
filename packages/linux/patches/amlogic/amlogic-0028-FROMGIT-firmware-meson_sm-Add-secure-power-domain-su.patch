@@ -1,7 +1,7 @@
 From 49b83c61d8300721be1b2fb8f4417354b32b1e8d Mon Sep 17 00:00:00 2001
 From: Jianxin Pan <jianxin.pan@amlogic.com>
 Date: Wed, 15 Jan 2020 19:30:28 +0800
-Subject: [PATCH 028/113] FROMGIT: firmware: meson_sm: Add secure power domain
+Subject: [PATCH 028/117] FROMGIT: firmware: meson_sm: Add secure power domain
  support
 
 The Amlogic Meson A1/C1 Secure Monitor implements calls to control power

@@ -1,7 +1,7 @@
 From 327bf6a725d43ad16e68662bc7a1bfc512f90680 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Fri, 24 Jan 2020 18:23:36 +0100
-Subject: [PATCH 042/113] WIP: ASoC: meson: convert axg sound card control to
+Subject: [PATCH 042/117] WIP: ASoC: meson: convert axg sound card control to
  schema
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>

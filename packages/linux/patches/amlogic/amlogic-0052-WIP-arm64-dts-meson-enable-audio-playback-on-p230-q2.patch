@@ -1,7 +1,7 @@
 From 11c89041774f5345f4862303e1e01bc54d1e5114 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Tue, 22 Oct 2019 18:18:32 +0200
-Subject: [PATCH 052/113] WIP: arm64: dts: meson: enable audio playback on
+Subject: [PATCH 052/117] WIP: arm64: dts: meson: enable audio playback on
  p230/q200
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>

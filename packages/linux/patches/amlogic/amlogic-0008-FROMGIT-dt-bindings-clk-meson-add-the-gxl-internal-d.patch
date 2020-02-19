@@ -1,7 +1,7 @@
 From f69bb394ce03972dd5971e4566c733493f933845 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Wed, 22 Jan 2020 11:04:49 +0100
-Subject: [PATCH 008/113] FROMGIT: dt-bindings: clk: meson: add the gxl
+Subject: [PATCH 008/117] FROMGIT: dt-bindings: clk: meson: add the gxl
  internal dac gate
 
 Add the gxl ACODEC clock id to the gxbb clock controller bindings

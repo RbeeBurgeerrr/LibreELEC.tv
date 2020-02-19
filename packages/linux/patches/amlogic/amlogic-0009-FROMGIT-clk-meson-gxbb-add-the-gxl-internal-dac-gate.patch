@@ -1,7 +1,7 @@
 From dcf652b3d81b938fc6b88a885d9e5561da5299a1 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Wed, 22 Jan 2020 11:04:50 +0100
-Subject: [PATCH 009/113] FROMGIT: clk: meson: gxbb: add the gxl internal dac
+Subject: [PATCH 009/117] FROMGIT: clk: meson: gxbb: add the gxl internal dac
  gate
 
 Add the ACODEC clock gate to the gxl clk controller driver

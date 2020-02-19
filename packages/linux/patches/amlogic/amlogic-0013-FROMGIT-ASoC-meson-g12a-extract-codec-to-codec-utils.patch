@@ -1,7 +1,7 @@
 From 07c05cf9238c3275e7a6fd974ea6ea3a38943881 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Thu, 13 Feb 2020 16:51:52 +0100
-Subject: [PATCH 013/113] FROMGIT: ASoC: meson: g12a: extract codec-to-codec
+Subject: [PATCH 013/117] FROMGIT: ASoC: meson: g12a: extract codec-to-codec
  utils
 
 The hdmi routing mechanism used on g12a hdmi is also used:

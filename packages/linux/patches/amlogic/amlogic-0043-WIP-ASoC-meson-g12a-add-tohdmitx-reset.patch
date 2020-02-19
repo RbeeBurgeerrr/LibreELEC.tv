@@ -1,7 +1,7 @@
 From c2bed434a83cf90a2e7f74405293c2c9009aba97 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Mon, 13 Jan 2020 13:50:44 +0100
-Subject: [PATCH 043/113] WIP: ASoC: meson: g12a: add tohdmitx reset
+Subject: [PATCH 043/117] WIP: ASoC: meson: g12a: add tohdmitx reset
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 ---

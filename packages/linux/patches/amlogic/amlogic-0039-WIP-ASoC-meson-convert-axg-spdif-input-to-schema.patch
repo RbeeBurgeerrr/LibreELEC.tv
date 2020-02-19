@@ -1,7 +1,7 @@
 From 305f9060bd4b9694c2c9f710f10fcab3f9c8db2a Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Fri, 24 Jan 2020 15:52:03 +0100
-Subject: [PATCH 039/113] WIP: ASoC: meson: convert axg spdif input to schema
+Subject: [PATCH 039/117] WIP: ASoC: meson: convert axg spdif input to schema
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 ---

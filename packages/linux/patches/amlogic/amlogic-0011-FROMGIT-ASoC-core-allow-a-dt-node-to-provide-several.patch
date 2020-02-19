@@ -1,7 +1,7 @@
 From 26eba44b97c0f9b365f5946e2a1bd728c1aa96c2 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Thu, 13 Feb 2020 16:51:51 +0100
-Subject: [PATCH 011/113] FROMGIT: ASoC: core: allow a dt node to provide
+Subject: [PATCH 011/117] FROMGIT: ASoC: core: allow a dt node to provide
  several components
 
 At the moment, querying the dai_name will stop of the first component

@@ -1,7 +1,7 @@
 From 1a69cc42889f64bce6f633ccd2d589b70cf582bf Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Wed, 22 Jan 2020 10:25:26 +0100
-Subject: [PATCH 007/113] FROMGIT: dt-bindings: reset: meson: add gxl internal
+Subject: [PATCH 007/117] FROMGIT: dt-bindings: reset: meson: add gxl internal
  dac reset
 
 Add the reset line of the internal DAC found on the amlogic gxl SoC family

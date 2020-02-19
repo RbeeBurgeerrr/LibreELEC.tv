@@ -1,7 +1,7 @@
 From ae4b0ae379151ab2f4c1e758a4c7878e6a20f06c Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Mon, 17 Feb 2020 17:16:47 +0000
-Subject: [PATCH 026/113] FROMGIT: ASoC: meson: aiu: simplify component
+Subject: [PATCH 026/117] FROMGIT: ASoC: meson: aiu: simplify component
  addition
 
 Now that the component name is unique within ASoC, there is no need to

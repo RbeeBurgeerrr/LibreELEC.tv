@@ -1,7 +1,7 @@
 From 3451f55cf2affbcd95b153729d6168fe1aad9f0c Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Thu, 13 Feb 2020 16:51:54 +0100
-Subject: [PATCH 015/113] FROMGIT: ASoC: meson: aiu: add i2s and spdif support
+Subject: [PATCH 015/117] FROMGIT: ASoC: meson: aiu: add i2s and spdif support
 
 Add support for the i2s and spdif audio outputs (AIU) found in the
 amlogic Gx SoC family

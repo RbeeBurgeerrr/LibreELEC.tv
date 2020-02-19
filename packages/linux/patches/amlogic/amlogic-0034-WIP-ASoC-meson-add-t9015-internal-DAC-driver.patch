@@ -1,7 +1,7 @@
 From f4cf32417fa2ff9012dc521fd694be02fe578de7 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Wed, 14 Aug 2019 17:09:18 +0200
-Subject: [PATCH 034/113] WIP: ASoC: meson: add t9015 internal DAC driver
+Subject: [PATCH 034/117] WIP: ASoC: meson: add t9015 internal DAC driver
 
 Add the codec driver of the internal DAC found on Amlogic gxl, g12a and
 sm1 family.

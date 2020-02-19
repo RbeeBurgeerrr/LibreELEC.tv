@@ -1,7 +1,7 @@
 From c2f0481aba177c79fd3abe0d02834ba04eff1085 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Tue, 22 Oct 2019 18:19:43 +0200
-Subject: [PATCH 053/113] WIP: arm64: dts: meson: add libretech cc s905x audio
+Subject: [PATCH 053/117] WIP: arm64: dts: meson: add libretech cc s905x audio
  playback
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>

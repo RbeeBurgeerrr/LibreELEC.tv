@@ -1,7 +1,7 @@
 From 7cc4c8b13cc3d6d322ea2e005034445f2f234ac4 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Mon, 18 Mar 2019 13:46:06 +0100
-Subject: [PATCH 050/113] WIP: arm64: dts: meson: u200: add audio support
+Subject: [PATCH 050/117] WIP: arm64: dts: meson: u200: add audio support
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>
 ---

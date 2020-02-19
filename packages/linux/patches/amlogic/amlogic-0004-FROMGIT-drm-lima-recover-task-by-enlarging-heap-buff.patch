@@ -1,7 +1,7 @@
 From 251dc3d11295e0e5be73355dc26181cb8b69c437 Mon Sep 17 00:00:00 2001
 From: Qiang Yu <yuq825@gmail.com>
 Date: Thu, 16 Jan 2020 21:11:56 +0800
-Subject: [PATCH 004/113] FROMGIT: drm/lima: recover task by enlarging heap
+Subject: [PATCH 004/117] FROMGIT: drm/lima: recover task by enlarging heap
  buffer
 
 Increase heap buffer backup memory when GP receive PLBU

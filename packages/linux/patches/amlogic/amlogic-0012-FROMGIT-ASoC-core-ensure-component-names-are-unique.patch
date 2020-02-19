@@ -1,7 +1,7 @@
 From 27f4865f8a844ff4e942125d1401612382f02ff2 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Fri, 14 Feb 2020 14:47:04 +0100
-Subject: [PATCH 012/113] FROMGIT: ASoC: core: ensure component names are
+Subject: [PATCH 012/117] FROMGIT: ASoC: core: ensure component names are
  unique
 
 Make sure each ASoC component is registered with a unique name.

@@ -1,7 +1,7 @@
 From 26c025d46b8ad1358e725e9fca1edb9464c5ae62 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Mon, 17 Feb 2020 02:53:13 +0000
-Subject: [PATCH 024/113] FROMGIT: ASoC: meson: aiu: fix acodec dai input name
+Subject: [PATCH 024/117] FROMGIT: ASoC: meson: aiu: fix acodec dai input name
  init
 
 Remove the double initialization of the dai input name as reported by

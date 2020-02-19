@@ -1,7 +1,7 @@
 From f4efe14909353fad7182d217affa69cf2feec391 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Mon, 17 Feb 2020 02:47:55 +0000
-Subject: [PATCH 021/113] FROMGIT: ASoC: meson: aiu: remove unused encoder
+Subject: [PATCH 021/117] FROMGIT: ASoC: meson: aiu: remove unused encoder
  structure
 
 Remove an unused structure definition which slipped through the initial

@@ -1,7 +1,7 @@
 From f7b90a175d0bb4028974770b5993eb576f2d517e Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Fri, 24 Jan 2020 16:02:43 +0100
-Subject: [PATCH 041/113] WIP: ASoC: meson: convert g12a tohdmitx control to
+Subject: [PATCH 041/117] WIP: ASoC: meson: convert g12a tohdmitx control to
  schema
 
 Signed-off-by: Jerome Brunet <jbrunet@baylibre.com>

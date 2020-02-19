@@ -1,7 +1,7 @@
 From 433da0d9d508a85a2bcc36a93117538411ed2b17 Mon Sep 17 00:00:00 2001
 From: Jerome Brunet <jbrunet@baylibre.com>
 Date: Thu, 13 Feb 2020 16:51:55 +0100
-Subject: [PATCH 016/113] FROMGIT: ASoC: meson: aiu: add hdmi codec control
+Subject: [PATCH 016/117] FROMGIT: ASoC: meson: aiu: add hdmi codec control
  support
 
 Add the codec to codec component which handles the routing between

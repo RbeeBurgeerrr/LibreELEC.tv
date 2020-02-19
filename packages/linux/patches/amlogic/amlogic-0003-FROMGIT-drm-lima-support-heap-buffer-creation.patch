@@ -1,7 +1,7 @@
 From 260925e7498710bdd2437c9e33d3c14501a242a3 Mon Sep 17 00:00:00 2001
 From: Qiang Yu <yuq825@gmail.com>
 Date: Thu, 16 Jan 2020 21:11:55 +0800
-Subject: [PATCH 003/113] FROMGIT: drm/lima: support heap buffer creation
+Subject: [PATCH 003/117] FROMGIT: drm/lima: support heap buffer creation
 
 heap buffer is used as output of GP and input of PP for
 Mali Utgard GPU. Size of heap buffer depends on the task
